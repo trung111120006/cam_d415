@@ -266,9 +266,6 @@ cam_d415_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 cam_d415_SOURCE_DIR:STATIC=D:/FILlab_code/cam_d415
 
-//The directory containing a CMake configuration file for librealsense2.
-librealsense2_DIR:PATH=librealsense2_DIR-NOTFOUND
-
 
 ########################
 # INTERNAL cache entries
