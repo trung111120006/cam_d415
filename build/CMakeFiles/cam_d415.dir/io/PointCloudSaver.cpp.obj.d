@@ -93,14 +93,17 @@ CMakeFiles/cam_d415.dir/io/PointCloudSaver.cpp.obj: \
  C:/msys64/ucrt64/include/c++/14.2.0/cerrno \
  C:/msys64/ucrt64/include/c++/14.2.0/bits/charconv.h \
  C:/msys64/ucrt64/include/c++/14.2.0/bits/basic_string.tcc \
+ C:/msys64/ucrt64/include/c++/14.2.0/cstdint \
+ C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdint.h \
+ C:/msys64/ucrt64/include/stdint.h \
+ C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stddef.h \
+ C:/msys64/ucrt64/include/stddef.h \
  C:/msys64/ucrt64/include/c++/14.2.0/fstream \
  C:/msys64/ucrt64/include/c++/14.2.0/istream \
  C:/msys64/ucrt64/include/c++/14.2.0/ios \
  C:/msys64/ucrt64/include/c++/14.2.0/exception \
  C:/msys64/ucrt64/include/c++/14.2.0/bits/exception_ptr.h \
  C:/msys64/ucrt64/include/c++/14.2.0/bits/cxxabi_init_exception.h \
- C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stddef.h \
- C:/msys64/ucrt64/include/stddef.h \
  C:/msys64/ucrt64/include/c++/14.2.0/typeinfo \
  C:/msys64/ucrt64/include/c++/14.2.0/bits/nested_exception.h \
  C:/msys64/ucrt64/include/c++/14.2.0/bits/ios_base.h \
@@ -154,4 +157,7 @@ CMakeFiles/cam_d415.dir/io/PointCloudSaver.cpp.obj: \
  C:/msys64/ucrt64/include/c++/14.2.0/x86_64-w64-mingw32/bits/messages_members.h \
  C:/msys64/ucrt64/include/c++/14.2.0/bits/locale_facets_nonio.tcc \
  C:/msys64/ucrt64/include/c++/14.2.0/bits/locale_conv.h \
- C:/msys64/ucrt64/include/c++/14.2.0/bits/quoted_string.h
+ C:/msys64/ucrt64/include/c++/14.2.0/bits/quoted_string.h \
+ C:/msys64/ucrt64/include/c++/14.2.0/cstring \
+ C:/msys64/ucrt64/include/string.h \
+ C:/msys64/ucrt64/include/sec_api/string_s.h

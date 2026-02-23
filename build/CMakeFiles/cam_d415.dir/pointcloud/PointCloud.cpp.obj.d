@@ -91,4 +91,9 @@ CMakeFiles/cam_d415.dir/pointcloud/PointCloud.cpp.obj: \
  C:/msys64/ucrt64/include/c++/14.2.0/cstdio \
  C:/msys64/ucrt64/include/c++/14.2.0/cerrno \
  C:/msys64/ucrt64/include/c++/14.2.0/bits/charconv.h \
- C:/msys64/ucrt64/include/c++/14.2.0/bits/basic_string.tcc
+ C:/msys64/ucrt64/include/c++/14.2.0/bits/basic_string.tcc \
+ C:/msys64/ucrt64/include/c++/14.2.0/cstdint \
+ C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdint.h \
+ C:/msys64/ucrt64/include/stdint.h \
+ C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stddef.h \
+ C:/msys64/ucrt64/include/stddef.h

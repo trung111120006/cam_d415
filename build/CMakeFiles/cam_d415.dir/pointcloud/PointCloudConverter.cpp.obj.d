@@ -224,4 +224,5 @@ CMakeFiles/cam_d415.dir/pointcloud/PointCloudConverter.cpp.obj: \
  C:/Users/Admin/OneDrive/DOCUME~1/REALSE~1.0/include/librealsense2/hpp/rs_eth_config.hpp \
  C:/Users/Admin/OneDrive/DOCUME~1/REALSE~1.0/include/librealsense2/hpp/../h/rs_eth_config.h \
  D:\FILlab_code\cam_d415\pointcloud\PointCloud.hpp \
+ D:/FILlab_code/cam_d415/camera/RealSenseCamera.hpp \
  C:/msys64/ucrt64/include/c++/14.2.0/iostream
