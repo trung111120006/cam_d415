@@ -129,13 +129,26 @@ CMakeFiles/cam_d415.dir/main.cpp.obj: D:\FILlab_code\cam_d415\main.cpp \
  C:/msys64/ucrt64/include/c++/14.2.0/istream \
  C:/msys64/ucrt64/include/c++/14.2.0/bits/istream.tcc \
  C:/msys64/ucrt64/include/c++/14.2.0/csignal \
+ C:/msys64/ucrt64/include/c++/14.2.0/thread \
+ C:/msys64/ucrt64/include/c++/14.2.0/bits/std_thread.h \
+ C:/msys64/ucrt64/include/c++/14.2.0/tuple \
+ C:/msys64/ucrt64/include/c++/14.2.0/bits/uses_allocator.h \
+ C:/msys64/ucrt64/include/c++/14.2.0/bits/unique_ptr.h \
+ C:/msys64/ucrt64/include/c++/14.2.0/bits/this_thread_sleep.h \
+ C:/msys64/ucrt64/include/c++/14.2.0/bits/chrono.h \
+ C:/msys64/ucrt64/include/c++/14.2.0/ratio \
+ C:/msys64/ucrt64/include/c++/14.2.0/cstdint \
+ C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdint.h \
+ C:/msys64/ucrt64/include/stdint.h \
+ C:/msys64/ucrt64/include/c++/14.2.0/limits \
+ C:/msys64/ucrt64/include/c++/14.2.0/ctime \
+ C:/msys64/ucrt64/include/c++/14.2.0/bits/parse_numbers.h \
+ C:/msys64/ucrt64/include/c++/14.2.0/chrono \
  D:\FILlab_code\cam_d415\camera/RealSenseCamera.hpp \
  C:/Users/Admin/OneDrive/DOCUME~1/REALSE~1.0/include/librealsense2/rs.hpp \
  C:/Users/Admin/OneDrive/DOCUME~1/REALSE~1.0/include/librealsense2/rs.h \
  C:/Users/Admin/OneDrive/DOCUME~1/REALSE~1.0/include/librealsense2/rsutil.h \
  C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdbool.h \
- C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdint.h \
- C:/msys64/ucrt64/include/stdint.h \
  C:/msys64/ucrt64/include/c++/14.2.0/math.h \
  C:/msys64/ucrt64/include/c++/14.2.0/cmath \
  C:/msys64/ucrt64/include/math.h \
@@ -175,9 +188,6 @@ CMakeFiles/cam_d415.dir/main.cpp.obj: D:\FILlab_code\cam_d415\main.cpp \
  C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_tempbuf.h \
  C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_raw_storage_iter.h \
  C:/msys64/ucrt64/include/c++/14.2.0/bits/align.h \
- C:/msys64/ucrt64/include/c++/14.2.0/bits/uses_allocator.h \
- C:/msys64/ucrt64/include/c++/14.2.0/bits/unique_ptr.h \
- C:/msys64/ucrt64/include/c++/14.2.0/tuple \
  C:/msys64/ucrt64/include/c++/14.2.0/bits/shared_ptr.h \
  C:/msys64/ucrt64/include/c++/14.2.0/bits/shared_ptr_base.h \
  C:/msys64/ucrt64/include/c++/14.2.0/bits/allocated_ptr.h \
@@ -193,13 +203,6 @@ CMakeFiles/cam_d415.dir/main.cpp.obj: D:\FILlab_code\cam_d415\main.cpp \
  C:/msys64/ucrt64/include/c++/14.2.0/bits/stream_iterator.h \
  C:/msys64/ucrt64/include/c++/14.2.0/sstream \
  C:/msys64/ucrt64/include/c++/14.2.0/bits/sstream.tcc \
- C:/msys64/ucrt64/include/c++/14.2.0/chrono \
- C:/msys64/ucrt64/include/c++/14.2.0/bits/chrono.h \
- C:/msys64/ucrt64/include/c++/14.2.0/ratio \
- C:/msys64/ucrt64/include/c++/14.2.0/cstdint \
- C:/msys64/ucrt64/include/c++/14.2.0/limits \
- C:/msys64/ucrt64/include/c++/14.2.0/ctime \
- C:/msys64/ucrt64/include/c++/14.2.0/bits/parse_numbers.h \
  C:/msys64/ucrt64/include/c++/14.2.0/cstring \
  C:/msys64/ucrt64/include/string.h \
  C:/msys64/ucrt64/include/sec_api/string_s.h \

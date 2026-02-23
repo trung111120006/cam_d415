@@ -223,4 +223,7 @@ CMakeFiles/cam_d415.dir/camera/RealSenseCamera.cpp.obj: \
  C:/Users/Admin/OneDrive/DOCUME~1/REALSE~1.0/include/librealsense2/hpp/rs_context.hpp \
  C:/Users/Admin/OneDrive/DOCUME~1/REALSE~1.0/include/librealsense2/hpp/rs_eth_config.hpp \
  C:/Users/Admin/OneDrive/DOCUME~1/REALSE~1.0/include/librealsense2/hpp/../h/rs_eth_config.h \
- C:/msys64/ucrt64/include/c++/14.2.0/iostream
+ C:/msys64/ucrt64/include/c++/14.2.0/iostream \
+ C:/msys64/ucrt64/include/c++/14.2.0/thread \
+ C:/msys64/ucrt64/include/c++/14.2.0/bits/std_thread.h \
+ C:/msys64/ucrt64/include/c++/14.2.0/bits/this_thread_sleep.h

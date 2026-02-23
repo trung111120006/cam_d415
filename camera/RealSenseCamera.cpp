@@ -1,6 +1,8 @@
 #include "RealSenseCamera.hpp"
 #include <iostream>
 #include <stdexcept>
+#include <thread>
+#include <chrono>
 
 using namespace std;
 
@@ -23,7 +25,6 @@ void RealSenseCamera::start() {
     try {
         auto profile = m_pipeline.start(m_rs_config);
 
-        // Lấy intrinsics ngay lúc start để dùng sau
         m_intrinsics = profile
             .get_stream(RS2_STREAM_DEPTH)
             .as<rs2::video_stream_profile>()
@@ -31,15 +32,15 @@ void RealSenseCamera::start() {
 
         m_running = true;
 
-        cout << "[Camera] Started " 
-             << m_config.width << "x" << m_config.height 
+        cout << "[Camera] Started "
+             << m_config.width << "x" << m_config.height
              << " @ " << m_config.fps << "fps" << endl;
-        cout << "[Camera] fx=" << m_intrinsics.fx 
+        cout << "[Camera] fx=" << m_intrinsics.fx
              << " fy=" << m_intrinsics.fy
-             << " cx=" << m_intrinsics.ppx 
+             << " cx=" << m_intrinsics.ppx
              << " cy=" << m_intrinsics.ppy << endl;
 
-        warmUp(30);
+        warmUp();
     }
     catch (const rs2::error& e) {
         throw runtime_error(string("[Camera] RealSense error: ") + e.what());
@@ -59,8 +60,19 @@ bool RealSenseCamera::isRunning() const {
 }
 
 rs2::depth_frame RealSenseCamera::getDepthFrame() {
-    rs2::frameset frames = m_pipeline.wait_for_frames();
-    return frames.get_depth_frame();
+    try {
+        // Dùng timeout_ms thay vì block mãi mãi
+        rs2::frameset frames;
+        if (!m_pipeline.poll_for_frames(&frames)) {
+            // poll không block — nếu chưa có frame thì trả về empty
+            return rs2::depth_frame(rs2::frame{});
+        }
+        return frames.get_depth_frame();
+    }
+    catch (const rs2::error& e) {
+        cerr << "[Camera] getDepthFrame error: " << e.what() << endl;
+        return rs2::depth_frame(rs2::frame{});
+    }
 }
 
 rs2_intrinsics RealSenseCamera::getIntrinsics() const {
@@ -69,10 +81,36 @@ rs2_intrinsics RealSenseCamera::getIntrinsics() const {
 
 // --- private ---
 
-void RealSenseCamera::warmUp(int frames) {
-    cout << "[Camera] Warming up (" << frames << " frames)..." << endl;
-    for (int i = 0; i < frames; i++) {
-        m_pipeline.wait_for_frames();
+void RealSenseCamera::warmUp() {
+    cout << "[Camera] Warming up (" << m_config.warmup_frames << " frames)..." << endl;
+
+    int success = 0;
+    int attempts = 0;
+    const int max_attempts = m_config.warmup_frames * 3; // Thử tối đa gấp 3 lần
+
+    while (success < m_config.warmup_frames && attempts < max_attempts) {
+        attempts++;
+        try {
+            // Dùng wait_for_frames với timeout tự đặt
+            rs2::frameset fs = m_pipeline.wait_for_frames(m_config.timeout_ms);
+            if (fs.get_depth_frame()) {
+                success++;
+            }
+        }
+        catch (const rs2::error& e) {
+            // Frame drop trong warm-up — không crash, chỉ log và thử lại
+            cerr << "[Camera] Warm-up frame drop (" << attempts << "): "
+                 << e.what() << endl;
+
+            // Chờ 100ms rồi thử lại
+            this_thread::sleep_for(chrono::milliseconds(100));
+        }
     }
-    cout << "[Camera] Ready!" << endl;
+
+    if (success < m_config.warmup_frames) {
+        cerr << "[Camera] Warning: Only got " << success << "/"
+             << m_config.warmup_frames << " warm-up frames." << endl;
+    } else {
+        cout << "[Camera] Ready! (" << attempts << " attempts)" << endl;
+    }
 }
